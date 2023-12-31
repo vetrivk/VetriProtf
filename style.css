@@ -1,0 +1,62 @@
+/* navbar toggler border none */
+
+.navbar-brand {
+  font-weight: 500;
+  color: #4169e1;
+  font-size: 24px;
+  transition: 0.3s color;
+}
+.navbar-brand:hover {
+  color: #0476d0;
+}
+.navbar-toggler {
+  border: none;
+  font-size: 1.25rem;
+}
+
+.navbar-toggler:focus,
+.btn-close:focus {
+  box-shadow: none;
+  outline: none;
+}
+.nav-link {
+  color: gray;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #2a2a2a;
+}
+
+/* solid border Start */
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #4169e1;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::before,
+  .nav-link.active::before {
+    visibility: visible;
+    width: 80%;
+  }
+}
+/* solid border end */
+
+/* section background */
+.hero-section {
+  background: url(/VetriProtfolio/image/bg.img.jpg) no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
